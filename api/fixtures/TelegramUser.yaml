@@ -1,0 +1,15 @@
+App\Entity\TelegramUser:
+    telegramUser{1..30}:
+        telegramId: <numberBetween(10000, 100000000)>
+        username: <username()>
+        fullName: '<firstName()> <lastName()>'
+        balance: <numberBetween(0, 100)>
+        isManager: False
+        isAdmin: False
+    telegramUser:
+        telegramId: 111222333
+        username: 'Test Username ...'
+        fullName: 'Test Fullname ...'
+        balance: 0
+        isManager: False
+        isAdmin: False
