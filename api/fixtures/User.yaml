@@ -1,0 +1,10 @@
+#USES ONLY IN DEV ENV
+parameters:
+    hashed_password: $2y$13$R4zo/xV8PjGuVrqqXaroxupsqnAo9tH0tKnfBZW0VExkjJvs2gEDe
+    
+App\Entity\User:
+    Bot:
+        email: bot@mail.com
+        roles: [ "ROLE_USER" ]
+#       hashed password: password
+        password: <{hashed_password}>
