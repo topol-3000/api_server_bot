@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\TelegramUserRepository;
 use DateTime;
@@ -10,12 +9,11 @@ use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 /**
  * @ORM\Entity(repositoryClass=TelegramUserRepository::class)
  * @ORM\HasLifecycleCallbacks()
  */
-#[ApiResource]
+#[ApiResource(attributes: ["security" => "is_granted('ROLE_USER')"])]
 class TelegramUser
 {
     /**
